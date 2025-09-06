@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import { SunIcon, MoonIcon, DownloadIcon, PrintIcon } from './Icons';
+import { SunIcon, MoonIcon, DownloadIcon } from './Icons';
 
 interface HeaderProps {
   onDownloadPDF: () => void;

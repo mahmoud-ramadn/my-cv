@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   // UI Icons from Lucide
   Sun,
@@ -10,9 +10,6 @@ import {
   ExternalLink,
   Printer,
   Download as DownloadLucide,
-  Github,
-  GitBranch,
-  Package,
   Settings,
   Cloud
 } from 'lucide-react';
