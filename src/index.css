@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print styles */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-avoid-break {
+    page-break-inside: avoid;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .dark\:bg-gray-900,
+  .dark\:text-white {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* ATS-friendly styles */
+.ats-friendly {
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.ats-friendly h1,
+.ats-friendly h2,
+.ats-friendly h3,
+.ats-friendly h4,
+.ats-friendly h5,
+.ats-friendly h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
